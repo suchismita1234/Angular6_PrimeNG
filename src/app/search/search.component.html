@@ -1,0 +1,28 @@
+<div class="jumbotron">
+
+<div class="ui-g ui-fluid">
+    <h3 class="first">Input Type</h3>
+    <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+            <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
+            <input type="text" pInputText placeholder="Username">         
+        </div>
+    </div>
+
+    <div class="ui-g-12 ui-md-4">
+    <h3 class="first">Basic checkbox</h3>
+    <div class="ui-g" style="width:250px;margin-bottom:10px">
+        <div class="ui-g-12"><p-checkbox name="group1" value="New York" label="New York" [(ngModel)]="selectedCities" inputId="ny"></p-checkbox></div>
+        <div class="ui-g-12"><p-checkbox name="group1" value="San Francisco" label="San Francisco" [(ngModel)]="selectedCities" inputId="sf"></p-checkbox></div>
+        <div class="ui-g-12"><p-checkbox name="group1" value="Los Angeles" label="Los Angeles" [(ngModel)]="selectedCities" inputId="la"></p-checkbox></div>
+    </div>
+    </div>
+
+    </div>
+
+    <h3 class="first">Basic</h3>
+   
+<p-autoComplete [(ngModel)]="country" [suggestions]="filteredCountriesSingle" (completeMethod)="filterCountrySingle($event)" field="name" [size]="30"
+placeholder="Countries" [minLength]="1"></p-autoComplete>
+<span style="margin-left:10px">Country: {{country ? country.name||country : 'none'}}</span>
+</div>
